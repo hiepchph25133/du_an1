@@ -1,6 +1,6 @@
-create database duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses
+﻿create database duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses_1
 go
-use duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses
+use duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses_1
 go
 --Tạo Bảng Login
 create table Login(
@@ -18,14 +18,14 @@ create table NhanVien(
     GioiTinh bit not null,
     Sdt varchar(10) not null,
     MaCV varchar(10) not null,
+	diachi nvarchar(50)  not null,
     TrangThai int not null,
     MatKhau nvarchar(50) null,
 )
 go
-
+Select * from NhanVien
 --Xóa Bảng Nhân Viên
-drop table NhanVien
-go
+
 
 --Tạo Bảng ChucVu
 create table ChucVu(
@@ -46,7 +46,7 @@ create table KhachHang(
     QuocGia nvarchar(50) not null
 )
 go
-
+Select * from KhachHang
 --Tạo Bảng HoaDon
 create table HoaDon(
     MaHD varchar(10) primary key,
@@ -83,13 +83,18 @@ create table MauSac(
     TenMS nvarchar(100) not null
 )
 go
-
+-- Tạo Bảng Hang
+create table hang(
+	MaHang varchar(10) primary key not null,
+	tenhang nvarchar(100) not null
+)
 --Tạo Bảng SanPham
 create table SanPham(
     MaSP varchar(10) primary key,
     TenSP nvarchar(200) not null,
     MaMS varchar(10) not null,
     MaDSP varchar(10) not null,
+	MaHang varchar(10) not null,
     MoTa nvarchar(100) null,
     SoLuong int not null,
     GiaNhap int not null,
@@ -117,7 +122,9 @@ go
 -- HoaDonChiTiet liên kết với SanPham
 alter table ChiTietHoaDon add constraint PK_ChiTietHoaDon_MaSP foreign key (MaSP) references SanPham(MaSP)
 go
-
+-- Hang liên kết với SanPham
+alter table SanPham add constraint PK_SanPham_MaHang foreign key (MaHang) references hang(MaHang)
+go
 -- SanPham liên kết với DongSP
 alter table SanPham add constraint PK_SanPham_MaDSP foreign key (MaDSP) references DongSP(MaDSP)
 go

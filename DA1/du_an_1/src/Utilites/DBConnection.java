@@ -16,7 +16,7 @@ public class DBConnection {
 
     public static final String HOSTNAME = "localhost";
     public static final String PORT = "1433";
-    public static final String DBNAME = "test";
+    public static final String DBNAME = "duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses_1";
     public static final String USERNAME = "sa";
     public static final String PASSWORD = "792003";
 
