@@ -54,8 +54,9 @@ public class Login extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txt_username = new app.bolivia.swing.JCTextField();
         txt_pass = new rojerusan.RSPasswordTextPlaceHolder();
-        rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
+        quenmatkhau = new rojerusan.RSMaterialButtonCircle();
         jLabel10 = new javax.swing.JLabel();
+        rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng Nhập");
@@ -127,14 +128,28 @@ public class Login extends javax.swing.JFrame {
         txt_pass.setPlaceholder("Enter Password ....");
         jPanel2.add(txt_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
 
-        rSMaterialButtonCircle1.setBackground(new java.awt.Color(255, 51, 51));
-        rSMaterialButtonCircle1.setText("Đăng Nhập");
-        jPanel2.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 290, 60));
+        quenmatkhau.setBackground(new java.awt.Color(255, 51, 51));
+        quenmatkhau.setText("Quên Mật Khẩu");
+        quenmatkhau.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quenmatkhauActionPerformed(evt);
+            }
+        });
+        jPanel2.add(quenmatkhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 290, 60));
 
         jLabel10.setFont(new java.awt.Font("Sitka Display", 0, 25)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Đăng Nhập");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 51, 51));
+        rSMaterialButtonCircle2.setText("Đăng Nhập");
+        rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonCircle2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 290, 60));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 590, 830));
 
@@ -149,6 +164,16 @@ public class Login extends javax.swing.JFrame {
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void quenmatkhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quenmatkhauActionPerformed
+        // TODO add your handling code here:
+        // Quên Mật Khẩu
+    }//GEN-LAST:event_quenmatkhauActionPerformed
+
+    private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
+        // TODO add your handling code here:
+        // Đăng Nhập
+    }//GEN-LAST:event_rSMaterialButtonCircle2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,7 +222,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
+    private rojerusan.RSMaterialButtonCircle quenmatkhau;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
     private rojerusan.RSPasswordTextPlaceHolder txt_pass;
     private app.bolivia.swing.JCTextField txt_username;
     // End of variables declaration//GEN-END:variables
