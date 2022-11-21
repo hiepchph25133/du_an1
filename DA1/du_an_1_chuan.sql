@@ -1,6 +1,6 @@
-﻿create database duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses_1
+﻿create database duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses
 go
-use duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses_1
+use duan1_xay_dung_ung_dung_ban_kinh_thoi_trang_FourGlasses
 go
 --Tạo Bảng Login
 create table Login(
@@ -96,13 +96,14 @@ create table SanPham(
     MaDSP varchar(10) not null,
 	MaHang varchar(10) not null,
     MoTa nvarchar(100) null,
+	loaihang nvarchar(100) not null,
     SoLuong int not null,
     GiaNhap int not null,
     GiaBan int not null,
     HinhAnh nvarchar(50) not null
 )
 go
-
+Select * from SanPham
 -- NhanVien liên kết với ChucVu
 alter table NhanVien add constraint PK_NhanVien_MaCV foreign key (MaCV) references ChucVu(MaCV)
 go

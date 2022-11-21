@@ -19,20 +19,21 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
     }
-    
-    public boolean validadatelogin(){
+
+    public boolean validadatelogin() {
         if (txt_username.getText().trim().equals("")) {
             JOptionPane.showMessageDialog(this, "Can phai dien User Name");
             txt_username.requestFocus();
             return false;
         }
-           if (txt_pass.getText().trim().equals("")) {
+        if (txt_pass.getText().trim().equals("")) {
             JOptionPane.showMessageDialog(this, "Can phai dien Password");
             txt_username.requestFocus();
             return false;
         }
         return true;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

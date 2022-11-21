@@ -54,6 +54,26 @@ public class Trangchu extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jPanel49 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
+        jPanel59 = new javax.swing.JPanel();
+        jPanel65 = new javax.swing.JPanel();
+        jLabel49 = new javax.swing.JLabel();
+        jPanel66 = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        jPanel67 = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jPanel68 = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        jPanel69 = new javax.swing.JPanel();
+        jPanel70 = new javax.swing.JPanel();
+        jLabel72 = new javax.swing.JLabel();
+        jPanel71 = new javax.swing.JPanel();
+        jLabel73 = new javax.swing.JLabel();
+        jPanel72 = new javax.swing.JPanel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jPanel73 = new javax.swing.JPanel();
+        jLabel76 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
@@ -102,26 +122,6 @@ public class Trangchu extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         jPanel51 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
-        jPanel34 = new javax.swing.JPanel();
-        jPanel35 = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
-        jPanel36 = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
-        jPanel37 = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jPanel52 = new javax.swing.JPanel();
-        jLabel57 = new javax.swing.JLabel();
-        jPanel38 = new javax.swing.JPanel();
-        jPanel39 = new javax.swing.JPanel();
-        jLabel40 = new javax.swing.JLabel();
-        jPanel40 = new javax.swing.JPanel();
-        jLabel41 = new javax.swing.JLabel();
-        jPanel41 = new javax.swing.JPanel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jPanel53 = new javax.swing.JPanel();
-        jLabel58 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel42 = new javax.swing.JPanel();
         jPanel43 = new javax.swing.JPanel();
@@ -143,6 +143,26 @@ public class Trangchu extends javax.swing.JFrame {
         jLabel65 = new javax.swing.JLabel();
         jPanel58 = new javax.swing.JPanel();
         jLabel66 = new javax.swing.JLabel();
+        jPanel74 = new javax.swing.JPanel();
+        jPanel75 = new javax.swing.JPanel();
+        jLabel77 = new javax.swing.JLabel();
+        jPanel76 = new javax.swing.JPanel();
+        jLabel78 = new javax.swing.JLabel();
+        jPanel77 = new javax.swing.JPanel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jPanel78 = new javax.swing.JPanel();
+        jLabel81 = new javax.swing.JLabel();
+        jPanel79 = new javax.swing.JPanel();
+        jPanel80 = new javax.swing.JPanel();
+        jLabel82 = new javax.swing.JLabel();
+        jPanel81 = new javax.swing.JPanel();
+        jLabel83 = new javax.swing.JLabel();
+        jPanel82 = new javax.swing.JPanel();
+        jLabel84 = new javax.swing.JLabel();
+        jLabel85 = new javax.swing.JLabel();
+        jPanel83 = new javax.swing.JPanel();
+        jLabel86 = new javax.swing.JLabel();
         jPanel60 = new javax.swing.JPanel();
         jPanel61 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
@@ -311,7 +331,122 @@ public class Trangchu extends javax.swing.JFrame {
 
         jPanel4.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 40));
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 220, 40));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 220, 40));
+
+        jPanel59.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel59.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel65.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel65.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel49.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel49.setText("  Home Page");
+        jPanel65.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel59.add(jPanel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel66.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel66.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel68.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel68.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel68.setText("  Home Page");
+        jPanel66.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel67.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel67.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel69.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel69.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel69.setText("  Home Page");
+        jPanel67.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel66.add(jPanel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel59.add(jPanel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jLabel70.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/icons8-get-cash-24.png"))); // NOI18N
+        jLabel70.setText("Bán Hàng");
+        jLabel70.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel70MouseClicked(evt);
+            }
+        });
+        jPanel59.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 110, 30));
+
+        jPanel68.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel68.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel71.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel71.setText("  Home Page");
+        jPanel68.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel59.add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 40));
+
+        jPanel69.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel69.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel70.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel70.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel72.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel72.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel72.setText("  Home Page");
+        jPanel70.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel69.add(jPanel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel71.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel71.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel73.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel73.setText("  Home Page");
+        jPanel71.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel72.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel72.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel74.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel74.setText("  Home Page");
+        jPanel72.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel71.add(jPanel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel69.add(jPanel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jLabel75.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel75.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel75.setText("  Home Page");
+        jPanel69.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel73.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel73.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel76.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel76.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel76.setText("  Home Page");
+        jPanel73.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel69.add(jPanel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 40));
+
+        jPanel59.add(jPanel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 40));
+
+        jPanel3.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 220, 40));
 
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -591,116 +726,6 @@ public class Trangchu extends javax.swing.JFrame {
         jPanel26.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 40));
 
         jPanel3.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 40));
-
-        jPanel34.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel34.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel35.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel36.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel36.setText("  Home Page");
-        jPanel35.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel34.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
-
-        jPanel36.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel36.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel37.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel37.setText("  Home Page");
-        jPanel36.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel37.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel37.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel38.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel38.setText("  Home Page");
-        jPanel37.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel36.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
-
-        jPanel34.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
-
-        jLabel39.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/icons8-order-history-30.png"))); // NOI18N
-        jLabel39.setText("Lich Su");
-        jPanel34.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 90, 30));
-
-        jPanel52.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel57.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel57.setText("  Home Page");
-        jPanel52.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel34.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 40));
-
-        jPanel38.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel38.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel39.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel39.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel40.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel40.setText("  Home Page");
-        jPanel39.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel38.add(jPanel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
-
-        jPanel40.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel40.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel41.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel41.setText("  Home Page");
-        jPanel40.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel41.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel41.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel42.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel42.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel42.setText("  Home Page");
-        jPanel41.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel40.add(jPanel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
-
-        jPanel38.add(jPanel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
-
-        jLabel43.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel43.setText("  Home Page");
-        jPanel38.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel53.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel58.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
-        jLabel58.setText("  Home Page");
-        jPanel53.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
-        jPanel38.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 40));
-
-        jPanel34.add(jPanel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 40));
-
-        jPanel3.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 220, 40));
         jPanel3.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
 
         jPanel42.setBackground(new java.awt.Color(51, 51, 51));
@@ -743,6 +768,11 @@ public class Trangchu extends javax.swing.JFrame {
         jLabel60.setForeground(new java.awt.Color(153, 153, 153));
         jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/icons8-paid-bill-24.png"))); // NOI18N
         jLabel60.setText("Hóa Đon");
+        jLabel60.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel60MouseClicked(evt);
+            }
+        });
         jPanel42.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         jPanel54.setBackground(new java.awt.Color(255, 51, 51));
@@ -812,6 +842,116 @@ public class Trangchu extends javax.swing.JFrame {
         jPanel42.add(jPanel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 40));
 
         jPanel3.add(jPanel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 40));
+
+        jPanel74.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel74.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel75.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel75.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel77.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel77.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel77.setText("  Home Page");
+        jPanel75.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel74.add(jPanel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel76.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel76.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel78.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel78.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel78.setText("  Home Page");
+        jPanel76.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel77.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel77.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel79.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel79.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel79.setText("  Home Page");
+        jPanel77.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel76.add(jPanel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel74.add(jPanel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jLabel80.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel80.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/icons8-order-history-30.png"))); // NOI18N
+        jLabel80.setText("Lich Su");
+        jPanel74.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 90, 30));
+
+        jPanel78.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel78.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel81.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel81.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel81.setText("  Home Page");
+        jPanel78.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel74.add(jPanel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 40));
+
+        jPanel79.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel79.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel80.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel80.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel82.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel82.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel82.setText("  Home Page");
+        jPanel80.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel79.add(jPanel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel81.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel81.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel83.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel83.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel83.setText("  Home Page");
+        jPanel81.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel82.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel82.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel84.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel84.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel84.setText("  Home Page");
+        jPanel82.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel81.add(jPanel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jPanel79.add(jPanel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 220, 40));
+
+        jLabel85.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel85.setText("  Home Page");
+        jPanel79.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel83.setBackground(new java.awt.Color(255, 51, 51));
+        jPanel83.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel86.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image da1/home_24px.png"))); // NOI18N
+        jLabel86.setText("  Home Page");
+        jPanel83.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        jPanel79.add(jPanel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 220, 40));
+
+        jPanel74.add(jPanel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 220, 40));
+
+        jPanel3.add(jPanel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 220, 40));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 220, 860));
 
@@ -910,6 +1050,18 @@ public class Trangchu extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 
+    private void jLabel70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel70MouseClicked
+        BanHang bh = new BanHang();
+        bh.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel70MouseClicked
+
+    private void jLabel60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel60MouseClicked
+      HoaDon hd = new HoaDon();
+      hd.setVisible(true);
+      dispose();
+    }//GEN-LAST:event_jLabel60MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -974,20 +1126,13 @@ public class Trangchu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
@@ -996,8 +1141,6 @@ public class Trangchu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
@@ -1008,7 +1151,26 @@ public class Trangchu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel84;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -1037,15 +1199,7 @@ public class Trangchu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
-    private javax.swing.JPanel jPanel35;
-    private javax.swing.JPanel jPanel36;
-    private javax.swing.JPanel jPanel37;
-    private javax.swing.JPanel jPanel38;
-    private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel40;
-    private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel42;
     private javax.swing.JPanel jPanel43;
     private javax.swing.JPanel jPanel44;
@@ -1056,21 +1210,39 @@ public class Trangchu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
-    private javax.swing.JPanel jPanel53;
     private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel56;
     private javax.swing.JPanel jPanel57;
     private javax.swing.JPanel jPanel58;
+    private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel60;
     private javax.swing.JPanel jPanel61;
     private javax.swing.JPanel jPanel62;
     private javax.swing.JPanel jPanel63;
     private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
+    private javax.swing.JPanel jPanel67;
+    private javax.swing.JPanel jPanel68;
+    private javax.swing.JPanel jPanel69;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel70;
+    private javax.swing.JPanel jPanel71;
+    private javax.swing.JPanel jPanel72;
+    private javax.swing.JPanel jPanel73;
+    private javax.swing.JPanel jPanel74;
+    private javax.swing.JPanel jPanel75;
+    private javax.swing.JPanel jPanel76;
+    private javax.swing.JPanel jPanel77;
+    private javax.swing.JPanel jPanel78;
+    private javax.swing.JPanel jPanel79;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel80;
+    private javax.swing.JPanel jPanel81;
+    private javax.swing.JPanel jPanel82;
+    private javax.swing.JPanel jPanel83;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lb_exit;
