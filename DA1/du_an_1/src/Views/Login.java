@@ -4,6 +4,7 @@
  */
 package Views;
 
+import Services.Login_Impl;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,24 +16,35 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    private Login_Impl iLogin;
+
     public Login() {
         initComponents();
         setLocationRelativeTo(null);
     }
-    
-    public boolean validadatelogin(){
+
+    private boolean validadatelogin() {
         if (txt_username.getText().trim().equals("")) {
             JOptionPane.showMessageDialog(this, "Can phai dien User Name");
             txt_username.requestFocus();
             return false;
         }
-           if (txt_pass.getText().trim().equals("")) {
+        if (txt_pass.getText().trim().equals("")) {
             JOptionPane.showMessageDialog(this, "Can phai dien Password");
             txt_username.requestFocus();
             return false;
         }
         return true;
     }
+
+    private void loginfrom() {
+        if (validadatelogin()) {
+            String username = txt_username.getText().trim();
+            String pass = new String(txt_pass.getPassword()).trim();
+            String role = iLogin.
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -173,6 +185,7 @@ public class Login extends javax.swing.JFrame {
     private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
         // TODO add your handling code here:
         // Đăng Nhập
+        loginfrom();
     }//GEN-LAST:event_rSMaterialButtonCircle2ActionPerformed
 
     /**
