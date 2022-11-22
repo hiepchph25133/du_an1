@@ -4,7 +4,15 @@
  */
 package Views;
 
+import Model.Khachhang;
+import Services.IPL.khachhangIPL;
+import Services.khachHangServices;
+import Viewmodel.KhachHangviewmodel;
+import java.awt.JobAttributes;
+import java.io.ObjectOutput;
+import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -12,14 +20,81 @@ import javax.swing.JOptionPane;
  */
 public class KhachHang extends javax.swing.JFrame {
 
+    khachhangIPL khaHangServices = new khachHangServices();
+    DefaultTableModel dtm;
+
     /**
      * Creates new form Login
      */
     public KhachHang() {
         initComponents();
         setLocationRelativeTo(null);
-    }    
-   
+        loadata();
+    }
+
+//    public void loadata() {
+//        dtm = (DefaultTableModel) TB_khachhang.getModel();
+//        dtm.setRowCount(0);
+//        List<Khachhang> kh = khaHangServices.getall();
+//        for (Khachhang x : kh) {
+//            Object[] rowdata = {
+//                dtm.getRowCount() + 1,
+//                x.getMaKH() + 1,
+//                x.getHotenKH(),
+//                x.getSDT(),
+//                x.getDiachi()
+//            };
+//        }
+//    }
+    public void loadata() {
+        dtm = (DefaultTableModel) TB_khachhang.getModel();
+        dtm.setRowCount(0);
+        List<KhachHangviewmodel> kh = khaHangServices.getallDB();
+        for (KhachHangviewmodel x : kh) {
+            dtm.addRow(new Object[]{
+                dtm.getRowCount() + 1,
+                x.getMaKH(),
+                x.getHotenKH(),
+                x.getSDT(),
+                x.getDiachi(),});
+
+        }
+
+    }
+
+    public Khachhang getdata() {
+        Khachhang kh = new Khachhang();
+        kh.setMaKH(txt_makh.getText());
+        kh.setHotenKH(txt_hoten.getText());
+        kh.setSDT(txt_sdt.getText());
+        kh.setDiachi(txt_diachi.getText());
+        return kh;
+    }
+
+    public boolean validatekhachhang() {
+        if (txt_makh.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Khong duoc de trong ma");
+            txt_makh.requestFocus();
+            return false;
+        }
+        if (txt_hoten.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Khong duoc de trong ten");
+            txt_hoten.requestFocus();
+            return false;
+        }
+        if (txt_sdt.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Khong duoc de trong SDT");
+            txt_sdt.requestFocus();
+            return false;
+        }
+        if (txt_diachi.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Khong duoc de trong dia chi");
+            txt_diachi.requestFocus();
+            return false;
+        }
+        return true;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,18 +115,18 @@ public class KhachHang extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txt_makh = new app.bolivia.swing.JCTextField();
-        btn_Xoa = new rojerusan.RSMaterialButtonCircle();
+        txt_diachi = new app.bolivia.swing.JCTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        btn_them = new rojerusan.RSMaterialButtonCircle();
+        btn_xoa = new rojerusan.RSMaterialButtonCircle();
         btn_sua = new rojerusan.RSMaterialButtonCircle();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        txt_makh1 = new app.bolivia.swing.JCTextField();
-        txt_makh2 = new app.bolivia.swing.JCTextField();
-        txt_makh3 = new app.bolivia.swing.JCTextField();
+        txt_hoten = new app.bolivia.swing.JCTextField();
+        txt_sdt = new app.bolivia.swing.JCTextField();
+        txt_makh = new app.bolivia.swing.JCTextField();
+        btn_them1 = new rojerusan.RSMaterialButtonCircle();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng Nhập");
@@ -64,18 +139,23 @@ public class KhachHang extends javax.swing.JFrame {
 
         TB_khachhang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Mã KH", "Ho va tên", "SÐT", "Ðia Chi"
+                "STT", "Mã KH", "Ho va tên", "SÐT", "Ðia Chi"
             }
         ));
         TB_khachhang.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
         TB_khachhang.setColorBordeFilas(new java.awt.Color(102, 102, 255));
         TB_khachhang.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
+        TB_khachhang.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TB_khachhangMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(TB_khachhang);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 620, 130));
@@ -136,19 +216,15 @@ public class KhachHang extends javax.swing.JFrame {
         jLabel8.setText("Mã Khách Hàng");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        txt_makh.setBackground(new java.awt.Color(102, 102, 255));
-        txt_makh.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_makh.setPlaceholder("Enter Ðia Chi ...");
-        txt_makh.addActionListener(new java.awt.event.ActionListener() {
+        txt_diachi.setBackground(new java.awt.Color(102, 102, 255));
+        txt_diachi.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_diachi.setPlaceholder("Enter Ðia Chi ...");
+        txt_diachi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_makhActionPerformed(evt);
+                txt_diachiActionPerformed(evt);
             }
         });
-        jPanel2.add(txt_makh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
-
-        btn_Xoa.setBackground(new java.awt.Color(255, 51, 51));
-        btn_Xoa.setText("Xóa");
-        jPanel2.add(btn_Xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 370, 140, 30));
+        jPanel2.add(txt_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -165,12 +241,22 @@ public class KhachHang extends javax.swing.JFrame {
         jLabel14.setText("Địa Chỉ");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
-        btn_them.setBackground(new java.awt.Color(255, 51, 51));
-        btn_them.setText("Thêm");
-        jPanel2.add(btn_them, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 140, 30));
+        btn_xoa.setBackground(new java.awt.Color(255, 51, 51));
+        btn_xoa.setText("Xóa");
+        btn_xoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_xoaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_xoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 140, 30));
 
         btn_sua.setBackground(new java.awt.Color(255, 51, 51));
         btn_sua.setText("Sửa");
+        btn_sua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_suaActionPerformed(evt);
+            }
+        });
         jPanel2.add(btn_sua, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 140, 30));
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
@@ -186,35 +272,44 @@ public class KhachHang extends javax.swing.JFrame {
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
-        txt_makh1.setBackground(new java.awt.Color(102, 102, 255));
-        txt_makh1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_makh1.setPlaceholder("Enter Ho va ten ...");
-        txt_makh1.addActionListener(new java.awt.event.ActionListener() {
+        txt_hoten.setBackground(new java.awt.Color(102, 102, 255));
+        txt_hoten.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_hoten.setPlaceholder("Enter Ho va ten ...");
+        txt_hoten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_makh1ActionPerformed(evt);
+                txt_hotenActionPerformed(evt);
             }
         });
-        jPanel2.add(txt_makh1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
+        jPanel2.add(txt_hoten, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
 
-        txt_makh2.setBackground(new java.awt.Color(102, 102, 255));
-        txt_makh2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_makh2.setPlaceholder("Enter SÐT ...");
-        txt_makh2.addActionListener(new java.awt.event.ActionListener() {
+        txt_sdt.setBackground(new java.awt.Color(102, 102, 255));
+        txt_sdt.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_sdt.setPlaceholder("Enter SÐT ...");
+        txt_sdt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_makh2ActionPerformed(evt);
+                txt_sdtActionPerformed(evt);
             }
         });
-        jPanel2.add(txt_makh2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+        jPanel2.add(txt_sdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
 
-        txt_makh3.setBackground(new java.awt.Color(102, 102, 255));
-        txt_makh3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_makh3.setPlaceholder("Enter Mã Khách Hàng ...");
-        txt_makh3.addActionListener(new java.awt.event.ActionListener() {
+        txt_makh.setBackground(new java.awt.Color(102, 102, 255));
+        txt_makh.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_makh.setPlaceholder("Enter Mã Khách Hàng ...");
+        txt_makh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_makh3ActionPerformed(evt);
+                txt_makhActionPerformed(evt);
             }
         });
-        jPanel2.add(txt_makh3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+        jPanel2.add(txt_makh, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, -1, -1));
+
+        btn_them1.setBackground(new java.awt.Color(255, 51, 51));
+        btn_them1.setText("Thêm");
+        btn_them1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_them1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btn_them1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 140, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 830));
 
@@ -222,9 +317,9 @@ public class KhachHang extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_makhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_makhActionPerformed
+    private void txt_diachiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_diachiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_makhActionPerformed
+    }//GEN-LAST:event_txt_diachiActionPerformed
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
 
@@ -237,26 +332,67 @@ public class KhachHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-            System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void txt_makh1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_makh1ActionPerformed
+    private void txt_hotenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_hotenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_makh1ActionPerformed
+    }//GEN-LAST:event_txt_hotenActionPerformed
 
-    private void txt_makh2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_makh2ActionPerformed
+    private void txt_sdtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_sdtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_makh2ActionPerformed
+    }//GEN-LAST:event_txt_sdtActionPerformed
 
-    private void txt_makh3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_makh3ActionPerformed
+    private void txt_makhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_makhActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_makh3ActionPerformed
+    }//GEN-LAST:event_txt_makhActionPerformed
+
+    private void btn_xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_xoaActionPerformed
+
+        int row = TB_khachhang.getSelectedRow();
+        String id = txt_makh.getText();
+        int hoi = JOptionPane.showConfirmDialog(this, "Ban co muon xoa khong? " , "Xoa", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if(hoi == JOptionPane.YES_OPTION){
+            JOptionPane.showMessageDialog(this, "Ban da xoa thanh cong");
+            khaHangServices.Delete(id);
+            loadata();
+        }
+
+    }//GEN-LAST:event_btn_xoaActionPerformed
+
+    private void TB_khachhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TB_khachhangMouseClicked
+        int row = TB_khachhang.getSelectedRow();
+        txt_makh.setText(TB_khachhang.getValueAt(row, 1) + "");
+        txt_hoten.setText(TB_khachhang.getValueAt(row, 2) + "");
+        txt_sdt.setText(TB_khachhang.getValueAt(row, 3) + "");
+        txt_diachi.setText(TB_khachhang.getValueAt(row, 4) + "");
+
+    }//GEN-LAST:event_TB_khachhangMouseClicked
+
+    private void btn_suaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_suaActionPerformed
+        Khachhang kh = new Khachhang();
+        kh.setMaKH(txt_makh.getText());
+        kh.setHotenKH(txt_hoten.getText());
+        kh.setSDT(txt_sdt.getText());
+        kh.setDiachi(txt_diachi.getText());
+        try {
+            khaHangServices.Update(kh);
+            loadata();
+            JOptionPane.showMessageDialog(this, "Sua thanh cong");
+
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_btn_suaActionPerformed
+
+    private void btn_them1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_them1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_them1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -316,9 +452,9 @@ public class KhachHang extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojeru_san.complementos.RSTableMetro TB_khachhang;
-    private rojerusan.RSMaterialButtonCircle btn_Xoa;
     private rojerusan.RSMaterialButtonCircle btn_sua;
-    private rojerusan.RSMaterialButtonCircle btn_them;
+    private rojerusan.RSMaterialButtonCircle btn_them1;
+    private rojerusan.RSMaterialButtonCircle btn_xoa;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
@@ -334,9 +470,9 @@ public class KhachHang extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private rojerusan.RSPopuMenu rSPopuMenu1;
+    private app.bolivia.swing.JCTextField txt_diachi;
+    private app.bolivia.swing.JCTextField txt_hoten;
     private app.bolivia.swing.JCTextField txt_makh;
-    private app.bolivia.swing.JCTextField txt_makh1;
-    private app.bolivia.swing.JCTextField txt_makh2;
-    private app.bolivia.swing.JCTextField txt_makh3;
+    private app.bolivia.swing.JCTextField txt_sdt;
     // End of variables declaration//GEN-END:variables
 }
