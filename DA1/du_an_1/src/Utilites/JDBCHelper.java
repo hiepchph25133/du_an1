@@ -1,43 +1,51 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Utilites;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-/**
- *
- * @author Soldier Boy
- */
 public class JDBCHelper {
 
-    public static ResultSet executeQuery(String sql, Object ... args) throws Exception {
-        Connection con = null;
-        PreparedStatement ptsm = null;
+    public static ResultSet excuteQuery(String sql, Object... args) {
+        Connection cn = null;
+        PreparedStatement pstm = null;
         ResultSet rs = null;
-
-        con = DBConnection.getConnection();
-        ptsm = con.prepareStatement(sql);
-        for (int i = 0; i < args.length; i++) {
-            ptsm.setObject(i + 1, args[i]);
+        cn = DBConnection.getConnection();
+        if (cn != null) {
+            try {
+                pstm = cn.prepareStatement(sql);
+                for (int i = 0; i < args.length; i++) {
+                    pstm.setObject(i + 1, args[i]);
+                }
+                rs = pstm.executeQuery();
+            } catch (SQLException ex) {
+                System.out.println("Lỗi Tại Câu Lệnh: " + sql);
+                System.out.println(ex);
+                ex.printStackTrace();
+            }
         }
-        rs = ptsm.executeQuery();
         return rs;
     }
 
-    public static Integer executeUpdate(String sql, Object... args) throws Exception {
-        Connection con = null;
-        PreparedStatement ptsm = null;
+    public static Integer excuteUpdate(String sql, Object... args) {
+        Connection cn = null;
+        PreparedStatement pstm = null;
         Integer row = 0;
-
-        con = DBConnection.getConnection();
-        ptsm = con.prepareStatement(sql);
-        for (int i = 0; i < args.length; i++) {
-            ptsm.setObject(i + 1, args[i]);
+        cn = DBConnection.getConnection();
+        if (cn != null) {
+            try {
+                pstm = cn.prepareStatement(sql);
+                for (int i = 0; i < args.length; i++) {
+                    pstm.setObject(i + 1, args[i]);
+                }
+                row = pstm.executeUpdate();
+            } catch (SQLException ex) {
+                System.out.println("Lỗi Tại Câu Lệnh: " + sql);
+                System.out.println(ex);
+                ex.printStackTrace();
+            }
         }
-        row = ptsm.executeUpdate();
         return row;
     }
-
 }
