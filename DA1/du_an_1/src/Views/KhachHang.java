@@ -385,7 +385,22 @@ public class KhachHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_suaActionPerformed
 
     private void btn_them1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_them1ActionPerformed
-        // TODO add your handling code here:
+          try {
+            Khachhang kh = getdata();
+            if (validatekhachhang()) {
+                  int ok = JOptionPane.showConfirmDialog(this, "Ban co muon them", "Them", JOptionPane.YES_OPTION);
+                  if (ok == JOptionPane.YES_OPTION) {
+               
+                
+               khaHangServices.add(kh);
+                loadata();
+                JOptionPane.showMessageDialog(this, "Them thanh cong");
+
+            }
+            }
+          
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_btn_them1ActionPerformed
 
     /**

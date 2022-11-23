@@ -28,7 +28,7 @@ public class khachhangreponstory {
                     + "      ,[ThanhPho]\n"
                     + "      ,[QuocGia]\n"
                     + "  FROM [dbo].[KhachHang]";
-            ResultSet rs = JDBCHelper.executeQuery(sql);
+            ResultSet rs = JDBCHelper.excuteQuery(sql);
             while (rs.next()) {
                 listkh.add(new Khachhang(rs.getString("MaKH"), rs.getString("HoTenKH"), rs.getString("NgaySinh"),
                         rs.getString("DiaChi"), rs.getString("Sdt"), rs.getString("ThanhPho"), rs.getString("QuocGia")));
@@ -69,7 +69,7 @@ public class khachhangreponstory {
                     + "           ,[QuocGia])\n"
                     + "     VALUES\n"
                     + "           (?,?,?,?,?,?,?)";
-            Integer row = JDBCHelper.executeUpdate(sql, kh.getMaKH(), kh.getHotenKH(),
+            Integer row = JDBCHelper.excuteUpdate(sql, kh.getMaKH(), kh.getHotenKH(),
                     kh.getNgaSinh(), kh.getDiachi(), kh.getSDT(), kh.getThanhpho(), kh.getQuocgia());
             return row;
         } catch (Exception e) {
@@ -83,7 +83,7 @@ public class khachhangreponstory {
         try {
             String sql = "DELETE FROM [dbo].[KhachHang]\n"
                     + "      WHERE MaKH = ?";
-            Integer row = JDBCHelper.executeUpdate(sql, ma);
+            Integer row = JDBCHelper.excuteUpdate(sql, ma);
             return row;
         } catch (Exception e) {
             e.printStackTrace();
@@ -102,7 +102,7 @@ public class khachhangreponstory {
                     + "      ,[ThanhPho] = ?\n"
                     + "      ,[QuocGia] = ?\n"
                     + " WHERE MaKH = ?";
-            Integer row = JDBCHelper.executeUpdate(sql, kh.getHotenKH(),
+            Integer row = JDBCHelper.excuteUpdate(sql, kh.getHotenKH(),
                     kh.getNgaSinh(), kh.getDiachi(), kh.getSDT(), kh.getThanhpho(), kh.getQuocgia(), kh.getMaKH());
             return row;
         } catch (Exception e) {

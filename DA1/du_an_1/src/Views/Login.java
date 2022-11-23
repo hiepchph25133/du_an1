@@ -23,11 +23,9 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
-<<<<<<< HEAD
-    public boolean validadatelogin() {
-=======
+
     private boolean validadatelogin() {
->>>>>>> 18ee1dfa16f9b80b59b2ad71a74af86a0d63710d
+
         if (txt_username.getText().trim().equals("")) {
             JOptionPane.showMessageDialog(this, "Can phai dien User Name");
             txt_username.requestFocus();
@@ -41,8 +39,7 @@ public class Login extends javax.swing.JFrame {
         return true;
     }
 
-<<<<<<< HEAD
-=======
+
     private void loginfrom() {
         if (validadatelogin()) {
             String username = txt_username.getText().trim();
@@ -50,8 +47,6 @@ public class Login extends javax.swing.JFrame {
             String role = iLogin.
         }
     }
-
->>>>>>> 18ee1dfa16f9b80b59b2ad71a74af86a0d63710d
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
